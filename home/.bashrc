@@ -118,7 +118,7 @@ get_dotfiles() {
 }
 
 function ssh() {
-  command ssh -Xt $1 'if command -v wget &> /dev/null; then; bash -lc "$(if ! [ -d ~/.dotfiles ]; then wget -qO- https://raw.githubusercontent.com/csgeorges/dotfiles/master/get_dotfiles.sh; fi)"; fi; bash'
+  command ssh -Xt $1 'if command -v wget &> /dev/null; then bash -lc "$(if ! [ -d ~/.dotfiles ]; then wget -qO- "https://raw.githubusercontent.com/csgeorges/dotfiles/master/get_dotfiles.sh"; fi)"; fi; bash'
 }
 
 wmip() {
