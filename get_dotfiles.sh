@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ `whoami` != cgeorges ]; then
+  echo 'user is not cgeorges, skipping.'
+  exit
+fi
+
 if ! command -v git &> /dev/null; then
   echo 'git not found'
   exit
