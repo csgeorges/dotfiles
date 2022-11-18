@@ -117,7 +117,7 @@ get_dotfiles() {
   bash -c "$(wget -qO- https://is.gd/Pqejcq)"
 }
 
-function ssh() {
+function gdssh() {
   command ssh -Xt $1 'if command -v wget &> /dev/null; then bash -lc "$(if ! [ -d ~/.dotfiles ]; then wget -qO- "https://is.gd/Pqejcq"; fi)"; fi; bash'
 }
 
