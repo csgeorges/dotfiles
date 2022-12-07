@@ -23,7 +23,7 @@ fi
 
 bash_main() {
 ##### Environment Variables #####
-export PATH=$PATH:"${HOME}/.local/bin:/opt/bin:/usr/local/go/bin:/opt/puppetlabs/bin"
+export PATH=$PATH:"${HOME}/.local/bin:/opt/bin:/usr/local/go/bin:/opt/puppetlabs/bin:/opt/puppetlabs/puppet/bin"
 EDITOR=/usr/bin/vim
 VISUAL=/usr/bin/vim
 HISTIGNORE="&:ls:ll:top:ps -ef"
