@@ -114,11 +114,11 @@ parse_git_branch() {
 }
 
 get_dotfiles() {
-  bash -c "$(wget -qO- https://is.gd/Pqejcq)"
+  bash -c "$(wget -qO- https://raw.githubusercontent.com/csgeorges/dotfiles/master/get_dotfiles.sh)"
 }
 
 function gdssh() {
-  command ssh -Xt $1 'if command -v wget &> /dev/null; then bash -lc "$(if ! [ -d ~/.dotfiles ]; then wget -qO- "https://is.gd/Pqejcq"; fi)"; fi; bash'
+  command ssh -Xt $1 'if command -v wget &> /dev/null; then bash -lc "$(if ! [ -d ~/.dotfiles ]; then wget -qO- "https://raw.githubusercontent.com/csgeorges/dotfiles/master/get_dotfiles.sh"; fi)"; fi; bash'
 }
 
 wmip() {
