@@ -40,7 +40,7 @@ alias less='less -R'
 alias tmux="tmux -2"
 alias today="date +%Y%m%d"
 alias now="date +%Y%m%d%H%M"
-alias susu="sudo -s HOME=$HOME"
+alias susu="sudo -E -s HOME=$HOME"
 
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
